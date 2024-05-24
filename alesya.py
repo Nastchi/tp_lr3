@@ -58,7 +58,7 @@ def calculate_weekend_distance():
 def forecast_distance():
     global data
     N = simpledialog.askinteger("Ввод", "Введите количество дней, на которые нужно сделать прогноз:", minvalue=1)
-    M = simpledialog.askinteger("Ввод", "Введите количество дней для нахождения средней:", minvalue=1)
+    M = simpledialog.askinteger("Ввод", "Введите количество дней для нахождения средней:", minvalue=2)
     if N is None:
         return
 
