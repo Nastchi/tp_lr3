@@ -55,11 +55,10 @@ def calculate_weekend_distance():
 
 
 # Функция для прогнозирования расстояния методом скользящей средней
-# Функция для прогнозирования расстояния методом скользящей средней
-# Функция для прогнозирования расстояния методом скользящей средней
 def forecast_distance():
     global data
-    N = simpledialog.askinteger("Ввод", "Введите количество дней для прогнозирования:", minvalue=1)
+    N = simpledialog.askinteger("Ввод", "Введите количество дней, на которые нужно сделать прогноз:", minvalue=1)
+    M = simpledialog.askinteger("Ввод", "Введите количество дней для нахождения средней:", minvalue=1)
     if N is None:
         return
 
@@ -72,7 +71,7 @@ def forecast_distance():
     forecast_values = []
 
     for i in range(N):
-        forecast_value = data['Пройденное расстояние (км)'].rolling(window=5).mean().iloc[-1]
+        forecast_value = data['Пройденное расстояние (км)'].rolling(window=M).mean().iloc[-1]
         forecast_values.append(forecast_value)
         new_row = pd.DataFrame({'Дата': [data['Дата'].iloc[-1] + pd.Timedelta(days=i + 1)],
                                 'Пройденное расстояние (км)': [forecast_value]})
@@ -90,19 +89,19 @@ def forecast_distance():
 root = tk.Tk()
 root.title("Данные о пробежках")
 root.geometry("300x350")
-root.configure(bg='#b68cf5')
+root.configure(bg='#98befa')
 
-title_label = tk.Label(root, text="Данные о пробежках", font=("Arial", 16, "bold"), fg='#120121', bg='#b68cf5')
+title_label = tk.Label(root, text="Данные о пробежках", font=("Arial", 16, "bold"), fg='#03142e', bg='#98befa')
 title_label.pack(pady=20)
 
-file_button = tk.Button(root, text="Открыть таблицу", command=select_file, font=("Arial", 10, "bold"), fg='#120121',
-                        bg='#E6E6FA', width=20, height=2)
-diagram_button = tk.Button(root, text='Показать графики', command=plot_data, font=("Arial", 10, "bold"), fg='#120121',
-                           bg='#E6E6FA', width=20, height=2)
+file_button = tk.Button(root, text="Открыть таблицу", command=select_file, font=("Arial", 10, "bold"), fg='#03142e',
+                        bg='#E6E6FA', width=29, height=2)
+diagram_button = tk.Button(root, text='Показать графики', command=plot_data, font=("Arial", 10, "bold"), fg='#03142e',
+                           bg='#E6E6FA', width=30, height=2)
 weekend_button = tk.Button(root, text='Сумма км за выходные', command=calculate_weekend_distance,
-                           font=("Arial", 10, "bold"), fg='#120121', bg='#E6E6FA', width=30, height=2)
-forecast_button = tk.Button(root, text='Прогноз на следующие N дней', command=forecast_distance,
-                            font=("Arial", 10, "bold"), fg='#120121', bg='#E6E6FA', width=30, height=2)
+                           font=("Arial", 10, "bold"), fg='#03142e', bg='#E6E6FA', width=29, height=2)
+forecast_button = tk.Button(root, text='Прогноз', command=forecast_distance,
+                            font=("Arial", 10, "bold"), fg='#03142e', bg='#E6E6FA', width=29, height=2)
 
 file_button.pack(padx=10, pady=10)
 diagram_button.pack(padx=30, pady=10)
