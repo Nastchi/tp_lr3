@@ -1,4 +1,5 @@
 import tkinter as tk
+import media_salary_graphics
 
 def on_button1_click():
     #вызов кода насти
@@ -12,12 +13,18 @@ def on_button3_click():
     # вызов кода алеси
     print("Button 3 clicked")
 
+def on_button4_click():
+    # вызов кода ани
+    print("Button 4 clicked")
+    media_salary_graphics.main()
+
+
 # Создаем главное окно
 root = tk.Tk()
 root.title("Our Form")
 
 # Задаем размер окна
-root.geometry("400x300")
+root.geometry("400x400")
 
 # Устанавливаем цвет фона окна в фиолетовый
 root.configure(bg='#efdeff')
@@ -35,6 +42,9 @@ button_Rufina.pack(pady=10)
 
 button_Alesya = tk.Button(root, text="Алеля", command=on_button3_click,font=("Arial", 10, "bold"),fg='#020121', bg='#8cb8f5',width=10,height=2)
 button_Alesya.pack(pady=10)
+
+button_anna = tk.Button(root, text="Анечка", command=on_button4_click, font=("Arial", 10, "bold"),fg='#020121', bg='#8cb8f5',width=10,height=2)
+button_anna.pack(pady=10)
 
 # Запускаем главный цикл обработки событий
 root.mainloop()
