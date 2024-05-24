@@ -10,7 +10,7 @@ def on_button2_click():
 
 def on_button3_click():
     # вызов кода алеси
-    print("Button 3 clicked")
+    os.system('python alesya.py')
 
 def on_button4_click():
     # вызов кода ани
@@ -39,7 +39,7 @@ button_Rufina.pack(pady=10)
 button_Alesya = tk.Button(root, text="Алеля", command=on_button3_click,font=("Arial", 10, "bold"),fg='#020121', bg='#8cb8f5',width=10,height=2)
 button_Alesya.pack(pady=10)
 
-button_Alesya = tk.Button(root, text="Аня", command=on_button4_click,font=("Arial", 10, "bold"),fg='#352900', bg='#fee27e',width=10,height=2)
-button_Alesya.pack(pady=10)
+button_Anna = tk.Button(root, text="Аня", command=on_button4_click,font=("Arial", 10, "bold"),fg='#352900', bg='#fee27e',width=10,height=2)
+button_Anna.pack(pady=10)
 # Запускаем главный цикл обработки событий
 root.mainloop()
