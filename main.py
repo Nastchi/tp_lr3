@@ -1,8 +1,8 @@
 import tkinter as tk
-
+import os
 def on_button1_click():
-    #вызов кода насти
-    print("Button 1 clicked")
+    os.system('python Populationmain.py')
+
 
 def on_button2_click():
     #вызов кода руфины
