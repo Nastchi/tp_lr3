@@ -20,10 +20,9 @@ def on_button4_click():
 root = tk.Tk()
 root.title("Our Form")
 
-# Задаем размер окна
 root.geometry("400x400")
 
-# Устанавливаем цвет фона окна в фиолетовый
+
 root.configure(bg='#efdeff')
 
 # Создаем надпись "Выбор кнопки" с темно-фиолетовым цветом текста
