@@ -14,7 +14,7 @@ def on_button3_click():
 
 def on_button4_click():
     # вызов кода ани
-    print('python media_salary_graphics.py')
+    os.system('python media_salary_graphics.py')
 # Создаем главное окно
 root = tk.Tk()
 root.title("Our Form")
