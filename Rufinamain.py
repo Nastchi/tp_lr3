@@ -13,7 +13,7 @@ def select_file():
     info_window = tk.Toplevel(root)
     info_window.title("Информация об инфекциях")
     info_window.geometry("1300x500")
-    info_table = tk.Text(info_window, height=30, width=200)
+    info_table = tk.Text(info_window, height=30, width=600)
     info_table.insert(tk.END, data.to_string(index=False))
     info_table.pack()
 
