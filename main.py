@@ -10,11 +10,11 @@ def on_button2_click():
 
 def on_button3_click():
     # вызов кода алеси
-    print("Button 3 clicked")
+
 
 def on_button4_click():
     # вызов кода ани
-    print("Button 4 clicked")
+
 
 # Создаем главное окно
 root = tk.Tk()
