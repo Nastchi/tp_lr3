@@ -84,7 +84,7 @@ def forecast_data(data, forecast_years):
     plt.show()
 
 def main():
-    file_path = r'C:\Users\ASUS\Desktop\tech_prog\3_tp_tab.csv'
+    file_path = '3_tp_tab.csv'
     data = load_data(file_path)
     display_data(data)
     calculate_max_changes(data)

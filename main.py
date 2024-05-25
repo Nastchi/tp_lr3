@@ -6,7 +6,7 @@ def on_button1_click():
 
 def on_button2_click():
     #вызов кода руфины
-    print("Button 2 clicked")
+    os.system('python Rufinamain.py')
 
 def on_button3_click():
     # вызов кода алеси
